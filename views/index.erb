@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Landing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+  <%= erb :nav %>
+
+  <div class="alert alert-primary" role="alert">
+    Recipes below
+  </div>
+
+  <% @loaded_recipes.each do |recipe_arr| %>
+      <div class="alert alert-light" role="alert">
+          <p> <strong>Title</strong> <%= recipe_arr[0] %> </p>
+          <p> <strong>Description</strong> <%= recipe_arr[1] %> </p>
+
+      </div>
+  <% end %>
+
+</body>
+
+</html>
